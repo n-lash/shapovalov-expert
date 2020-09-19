@@ -1,6 +1,7 @@
 .header {
     background: $B10 url('../img/family-picture-istoc.jpg') center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding: 50px 0 130px;
     min-height: 100vh;
     position: relative;
@@ -77,9 +78,9 @@
         @include text($H20, 500, $B40);
         @include media($screen-ipad-pro) {
             &:hover {
-                color: lighten($B40, 20%);
+                color: lighten($B40, 25%);
                 transition: color 0.3s ease-in-out;
-                
+                // text-decoration: overline;
             }
         }
     }

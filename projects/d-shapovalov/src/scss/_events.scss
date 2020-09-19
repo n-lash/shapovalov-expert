@@ -1,0 +1,39 @@
+.events {
+    padding: 105px 0 105px;
+    background-color: $N05;
+    text-align: center;
+    &__subtitle {
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        @include text($H40, 700);
+        color: $R10;
+    }
+
+    &__title {
+        @include text($H46, 600);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        span {
+            display: block;
+        }
+    }
+
+    &__descr {
+        @include text($H20, 300);
+        margin-bottom: 20px;
+        a {
+            @include text($H24, 700);
+            font-weight: 700;
+            font-style: italic;
+            &:hover {
+                text-decoration: underline;
+                transition: all 0.2s ease;
+            }
+        }
+    }
+
+    &__date {
+        @include text($H24, 700);
+        font-style: italic;
+    }
+}

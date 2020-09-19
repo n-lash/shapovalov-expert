@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;600&display=swap');
 
 // Fonts
 $font--main: 'Raleway', Arial, sans-serif;
@@ -10,6 +10,7 @@ $font--secondary: 'Roboto', Arial, sans-serif;
 //Neutrals
 $N0: #ffffff;
 $N00: #000000;
+$N05: #f0f0f0;
 $N10: #c3c3c3;
 $N20: #262626;
 $N30: #29221c; // opacity 0.7 для формы
@@ -45,7 +46,9 @@ $H60: px_to_rem(60px);
 $H55: px_to_rem(55px);
 $H50: px_to_rem(50px);
 $H48: px_to_rem(48px);
+$H46: px_to_rem(46px);
 $H45: px_to_rem(45px);
+$H42: px_to_rem(42px);
 $H44: px_to_rem(44px);
 $H40: px_to_rem(40px);
 $H36: px_to_rem(36px);

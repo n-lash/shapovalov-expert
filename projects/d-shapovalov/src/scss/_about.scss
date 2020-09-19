@@ -1,0 +1,49 @@
+.about {
+    padding: 105px 0 105px;
+    background-color: $N05;
+    &__container {
+        @include flex-col(stretch, stretch);
+        @include media($screen-ipad-pro) {
+            @include flex-row(stretch, stretch);
+        }
+    }
+
+    &__img-wrapper {
+        flex: 1 1 50%;
+        max-width: 50%;
+        @include flex(center, center);
+
+        @include media($screen-ipad-pro) {
+            margin-right: 40px;
+        }
+    }
+
+    &__content-wrapper {
+        flex: 1 1 50%;
+        max-width: 50%;
+        background-color: $B10;
+        padding: 60px;
+    }
+
+    &__title {
+        font-family: $font--secondary;
+        @include text($H46, 600, $N0);
+        margin-bottom: 24px;
+        line-height: 1;
+        &:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: $N0;
+            opacity: 0.6;
+            margin-top: 34px;
+        }
+    }
+
+    &__text {
+        font-family: $font--secondary;
+        @include text($H20, 300, $N0);
+        line-height: 1.55;
+    }
+}

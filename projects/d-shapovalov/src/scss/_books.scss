@@ -1,0 +1,43 @@
+.books {
+    padding: 105px 0 105px;
+    &__container {
+        @include flex-row;
+    }
+
+    &__content-wrapper {
+        flex: 1 1 50%;
+        max-width: 50%;
+        margin-right: 40px;
+        font-family: $font--secondary;
+    }
+
+    &__book-link {
+
+        &--first {}
+
+        &--second {}
+    }
+
+    &__img-wrapper {
+        margin-bottom: 30px;
+    }
+
+    &__name {
+        @include text($H36, 600);
+        line-height: 1.23;
+        text-align: center;
+        margin-bottom: 20px;
+        &--future-book {
+            @include text($H46, 600);
+        }
+    }
+
+    &__descr {
+        @include text($H20, 300);
+        line-height: 1.55;
+        text-align: center;
+        span {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.consultation {
+    padding: 105px 0 105px;
+    text-align: left;
+    background: $N10 url('../img/comp.jpeg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $N0;
+    &__title {
+        margin-bottom: 40px;
+        @include text($H46, 700);
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        @include text($H20, 300);
+        font-family: $font--secondary;
+        line-height: 1.55;
+        max-width: 56%;
+    }
+
+    &__price {
+        @include text($H20, 300);
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        @include flex-col;
+
+        &-input,
+        &-btn {
+            height: 56px;
+            padding: 0 20px;
+            border-radius: 7px;
+        }
+        &-input {
+            margin-bottom: 24px;
+            width: 500px;
+            max-width: 50%;
+            outline-color: $N10;
+            @include flex($align: center);
+        }
+        &-btn {
+            width: 250px;
+            background-color: $R20;
+            font-family: $font--secondary;
+            @include text($H20, 500);
+            letter-spacing: 0.03em;
+            @include flex(center, center);
+        }
+    }
+}

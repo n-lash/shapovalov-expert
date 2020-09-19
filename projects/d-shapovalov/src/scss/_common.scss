@@ -17,7 +17,7 @@
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $B10;
+    background: rgba($B10, 0.5);
     border-radius: 8px;
     box-shadow: inset 0 0 5px grey;
 }
@@ -31,11 +31,11 @@ body {
     min-height: 100vh;
 }
 body {
-    font-size: 100%;
+    // font-size: 100%;
     font-size: $H16;
     font-family: $font--main;
     color: $N20;
-    background-color: grey;
+    background-color: $N0;
     // line-height: 2.22;
     font-weight: 400;
 }
@@ -48,6 +48,19 @@ a {
         text-decoration: none;
         color: inherit;
     }
+}
+img {
+    width: 100%;
+}
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+}
+input {
+    border: none;
 }
 ul, ol {
     list-style: none;
