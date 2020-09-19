@@ -2,7 +2,7 @@
     background: $B10 url('../img/family-picture-istoc.jpg') center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 50px 0 130px;
+    padding: 50px 0 110px;
     min-height: 100vh;
     position: relative;
     display: flex;
@@ -48,7 +48,7 @@
         margin: 0 auto;
     }
     &__text {
-        @include text($H20, 500);
+        @include text($H20, 300);
         font-family: $font--secondary;
         line-height: 1.5;
         letter-spacing: 0.1em;
@@ -98,23 +98,27 @@
     left: 0;
     right: 0;
     height: 90px;
-    background-color: yellow;
+    // background-color: yellow;
     &__item {
         flex: 1 1 25%;
         max-width: 25%;
         @include flex(center, center);
         height: 100%;
         &--fb {
-            background-color: $B30;
+            // background-color: $B30;
+            background-color: $B60f;
         }
         &--yt {
-            background-color: $R10;
+            // background-color: $R10;
+            background-color: $R30y;
         }
         &--ig {
-            background-color: $B40;
+            // background: rgb(117,35,190);
+            background: linear-gradient(180deg, #7523be 35%, #db8d3f 100%);
         }
         &--tg {
-            background-color: $B50;
+            // background-color: $B50;
+            background-color: $B70t;
         }
     }
 

@@ -5,6 +5,20 @@
     background-size: cover;
     background-attachment: fixed;
     color: $N0;
+    position: relative;
+    &:after {
+        content: '';
+        background-color: rgba($N30, 0.4);
+        position: absolute;
+        @include position;
+        appearance: none;
+        z-index: 0;
+    }
+    &__container {
+        z-index: 10;
+        position: relative;
+    }
+
     &__title {
         margin-bottom: 40px;
         @include text($H46, 700);

@@ -5,7 +5,7 @@
 $font--main: 'Raleway', Arial, sans-serif;
 $font--secondary: 'Roboto', Arial, sans-serif;
 
-// Colors
+// Colors //
 
 //Neutrals
 $N0: #ffffff;
@@ -15,18 +15,21 @@ $N10: #c3c3c3;
 $N20: #262626;
 $N30: #29221c; // opacity 0.7 для формы
 
-
 //Blue
 $B10: #0070CC;
 $B20: #3c5a98;
 $B30: #5851db;
 $B40: #08c;
 $B50: #140094;
-
+$B60f: #475993;
+$B70t: #65AADD;
 
 //Red
 $R10: #e62117;
 $R20: #FF7300;
+$R30y: #F00;
+
+
 
 @function px_to_rem($target, $context: $base-size) {
     @if $target==0 {
