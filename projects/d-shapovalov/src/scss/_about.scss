@@ -9,20 +9,36 @@
     }
 
     &__img-wrapper {
-        flex: 1 1 50%;
-        max-width: 50%;
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
         @include flex(center, center);
+        @include padding-hack(100%);
 
         @include media($screen-ipad-pro) {
             margin-right: 40px;
+            flex: 1 1 50%;
+            max-width: 50%;
+            margin-bottom: 0;
+            @include padding-hack(46.3%);
         }
     }
 
     &__content-wrapper {
-        flex: 1 1 50%;
-        max-width: 50%;
+        flex: 1 1 100%;
+        max-width: 100%;
         background-color: $B10;
-        padding: 60px;
+        padding: 26px;
+
+        @include media($screen-ipad-pro) {
+            margin-right: 40px;
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
+
+        @include media(1176px) {
+            padding: 60px;
+        }
     }
 
     &__title {

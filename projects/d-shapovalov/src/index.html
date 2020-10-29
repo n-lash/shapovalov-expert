@@ -30,14 +30,29 @@
 			<nav class="main-nav">
 
 				<button class="main-nav__burger-menu" id="burgerMenu">
-					<!-- <svg>
-						<use xlink:href="#menu-burger"></use>
-					</svg> -->
+					<!-- <svg><use xlink:href="#menu-burger"></use></svg> -->
 					<span></span>
-
 				</button>
+
+				<ul class="main-nav__mobile-list" id="mobileMenuList">
+					<li class="main-nav__item">
+						<a href="#about" class="main-nav__link">Обо&nbsp;мне</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#books" class="main-nav__link">Книги</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#blog" class="main-nav__link">Блог</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#events" class="main-nav__link">События</a>
+					</li>
+					<li class="main-nav__item">
+						<a href="#consultation" class="main-nav__link">Консультация</a>
+					</li>
+				</ul>
 			
-				<ul class="main-nav__list" id="mobileMenuList">
+				<ul class="main-nav__list">
 					<li class="main-nav__item">
 						<a href="#about" class="main-nav__link">Обо&nbsp;мне</a>
 					</li>
@@ -204,7 +219,7 @@
 				<p class="consultation__text">Консультация проходит в форме личной встречи в г. Харьков (Украина), в Skype или по телефону в форме вопросов и ответов с целью найти оптимальное решение в сложившейся ситуации.</p>
 				<p class="consultation__price">Стоимость одного часа консультации 500 грн.</p>
 				<form action="#" class="consultation__form">
-					<input class="consultation__form-input" type="text" name="name" id="name" placeholder="Имя">
+					<input class="consultation__form-input" type="text" name="name" id="name" placeholder="Имя" required>
 					<input class="consultation__form-input" type="tel" name="tel" id="tel" placeholder="Телефон" required>
 					<button class="consultation__form-btn" type="submit">Отправить</button>
 				</form>

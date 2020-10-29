@@ -1,14 +1,36 @@
 .books {
     padding: 105px 0 105px;
     &__container {
-        @include flex-row;
+        @include flex-col(center, center);
+
+        @include media(841px) {
+            @include flex-row;
+        }
     }
 
     &__content-wrapper {
-        flex: 1 1 50%;
-        max-width: 50%;
-        margin-right: 40px;
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-right: 0;
         font-family: $font--secondary;
+
+        &:first-child {
+            margin-bottom: 40px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include media(841px) {
+            flex: 1 1 50%;
+            max-width: 50%;
+            margin-right: 40px;
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__book-link {
