@@ -1,0 +1,273 @@
+.header {
+    background: $B10 url('../images/family-picture-istoc.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0 110px;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &:after {
+        content: '';
+        background-color: rgba($N30, 0.4);
+        position: absolute;
+        @include position;
+        appearance: none;
+    }
+    &__container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__title-wrapper {
+        padding-left: 0px;
+        color: $N05;
+        z-index: 1;
+
+        @include media(638px) {
+            padding-left: 100px;
+        }
+    }
+    &__title {
+        @include text($H60, 700);
+        margin-bottom: 20px;
+       span {
+           display: block;
+       }
+
+       @include media(638px) {
+        @include text($H80, 700);
+       }
+    }
+    &__subtitle {
+        font-family: $font--secondary;
+        @include text($H24);
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+        span {
+            display: block;
+        }
+    }
+    &__text-wrapper {
+        color: #f0f0f0;
+        z-index: 1;
+        margin: 0 auto;
+    }
+    &__text {
+        @include text($H20, 300);
+        font-family: $font--secondary;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+    }
+}
+
+
+
+// main navigation
+
+
+.main-nav {
+    position: relative;
+    z-index: 10;
+    padding-left: 0;
+    margin-bottom: 20px;
+
+    @include media(670px) {
+        padding-left: 20px;
+    }
+
+    &__list {
+        display: none;
+
+        @include media(638px) {
+            @include flex-row(flex-start, center);
+            background-color: transparent;
+            padding-top: 0px;
+            transform: none;
+
+        }
+
+    }
+
+    &__mobile-list {
+        @include flex-col(center,flex-start);
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        align-items: flex-start;
+        background-color: rgba($B20, 0.96);
+        padding: 185px 50px 50px 40px;
+        width: 100%;
+        transform: translate( calc(-100% - 30px), -25%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease;
+
+        @include media(500px) {
+            width: fit-content;
+        }
+
+        @include media(638px) {
+            display: none;
+        }
+
+        &.active {
+            transform: translate(-30px, -25%);
+            height: initial;
+            // display: flex;
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include media(638px) {
+            margin-right: 30px;
+            margin-bottom: 0;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-family: $font--secondary;
+        @include text($H20, 500, $B80);
+        @include media($screen-ipad-pro) {
+            &:hover {
+                color: lighten($B40, 30%);
+                transition: color 0.2s ease-in-out;
+                // text-decoration: overline;
+            }
+        }
+    }
+
+    &__burger-menu {
+        // position: absolute;
+        // top: 30px;
+        // left: 0;
+        // z-index: 10;
+        // svg {
+        //     width: 46px;
+        //     height: 46px;
+        // }
+
+        display: inline-flex;
+        width: 46px;
+        height: 42px;
+        background-color: transparent;
+        position: relative;
+        z-index: 10;
+        top: -6px;
+        left: 0;
+        cursor: pointer;
+
+        span {
+            width: 100%;
+            height: 4px;
+            background-color: $N0;
+            border-radius: 3px;
+            position: absolute;
+            top: 50%;
+            &:before,
+            &:after {
+                content: '';
+                width: 100%;
+                height: 4px;
+                position: absolute;
+                border-radius: 3px;
+                margin-left: -50%;
+                transition: transform 0.3s ease;
+                background-color: $N0;
+            }
+            &:before {
+                transform: translateY(-14px); 
+            }
+            &:after {
+                transform: translateY(14px);
+            }
+        }
+
+        &.active {
+            span {
+                background-color: transparent;
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        @include media(638px) {
+            display: none;
+        }
+        // @include media($screen-netbook) {
+        //     display: none;
+        // }
+    }
+}
+
+
+
+// social links
+
+.header-socials {
+    z-index: 10;
+    @include flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+
+    &__item {
+        flex: 1 1 25%;
+        max-width: 25%;
+        @include flex(center, center);
+        height: 100%;
+        &--fb {
+            // background-color: $B30;
+            background-color: $B60f;
+        }
+        &--yt {
+            // background-color: $R10;
+            background-color: $R30y;
+        }
+        &--ig {
+            // background: rgb(117,35,190);
+            background: linear-gradient(180deg, #7523be 35%, #db8d3f 100%);
+        }
+        &--tg {
+            // background-color: $B50;
+            background-color: $B70t;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+        svg {
+            width: 50px;
+            height: 50px;
+            fill: $N0;
+        }
+        @include media($screen-ipad-pro) {
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+}
