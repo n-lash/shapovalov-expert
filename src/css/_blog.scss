@@ -6,6 +6,7 @@
         @include flex-row;
         padding: 0 10px 0;
         margin-bottom: 60px;
+        flex-wrap: wrap;
     }
 
     &__title {
@@ -38,8 +39,9 @@
 .blog-article {
     flex: 1 1 30%;
     max-width: 30%;
-    margin-right: 20px;
-    margin-left: 20px;
+    // margin-right: 20px;
+    // margin-left: 20px;
+    margin: 20px;
     &__link {}
 
     &__img-wrapper {

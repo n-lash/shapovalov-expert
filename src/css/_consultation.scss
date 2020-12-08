@@ -41,17 +41,30 @@
         @include flex-col;
 
         &-input,
-        &-btn {
+        &-btn,
+        &-message {
             height: 56px;
             padding: 0 20px;
             border-radius: 7px;
+            @include text($H16, 300, $N20);
+            &::placeholder {
+                font-family: $font--secondary;
+                @include text($H14, 300, $N11);
+            }
         }
-        &-input {
+        &-input,
+        &-message {
             margin-bottom: 24px;
             width: 500px;
             max-width: 50%;
             outline-color: $N10;
             @include flex($align: center);
+        }
+        &-message {
+            height: 110px;
+            padding-top: 20px;
+            font-family: $font--secondary;
+            @include text($H16, 300, $N20);
         }
         &-btn {
             width: 250px;
@@ -74,12 +87,55 @@
         }
     }
 
-    &__error {
-        background-color: rgba(224, 79, 54, 0.7);
-        border-radius: 8px;
-        padding: 10px 20px;
-        margin-bottom: 5px;
-        // width: 100%;
-        @include text($H22, 700);
-    }
+    // &__error {
+    //     background-color: rgba(224, 79, 54, 0.7);
+    //     border-radius: 8px;
+    //     padding: 10px 20px;
+    //     margin-bottom: 5px;
+    //     // width: 100%;
+    //     @include text($H22, 700);
+    // }
 }
+
+
+/*Сообщение об отправке*/
+.contacts__massage {
+    display: none;
+    align-items: center;
+    border: solid 1px #ddd;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contacts__massage.active ~ * {
+    opacity: 1;
+    filter: blur(20px); 
+  }
+  
+  .contacts__massage img{
+    width: 90px;
+  }
+  
+  .contacts__info{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0;
+  }
+  
+  .contacts__info-text{
+    font-size: 14px;
+    color: #000000; 
+    margin-bottom: 0;
+  }

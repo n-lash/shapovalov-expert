@@ -1,0 +1,45 @@
+.article {
+    background: $N10;
+    padding: 90px 0 60px;
+    &__container {
+        text-align: center;
+    }
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        color: $N20;
+        &:after {
+            margin: 30px auto 50px;
+        }
+    }
+
+    &__text-wrapper {
+
+    }
+
+    &__text {
+        text-align: left;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__video {
+        width: 80vw;
+        height: 70vh;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        margin-bottom: 40px;
+        &--forward {
+            span {
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+        &--main {}
+    }
+}
