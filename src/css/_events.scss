@@ -11,13 +11,21 @@
     }
 
     &__title {
-        @include text($H46, 600);
+        @include text($H36, 600);
         text-transform: uppercase;
         margin-bottom: 40px;
         font-family: $font--secondary;
         span {
             display: block;
             text-transform: initial;
+        }
+
+        @include media(541px) {
+            @include text($H40, 600);
+        }
+
+        @include media(541px) {
+            @include text($H46, 600);
         }
     }
 

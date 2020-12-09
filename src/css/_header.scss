@@ -1,12 +1,21 @@
 .header {
-    background: $B10 url('../images/family-picture-istoc.jpg') center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    // background: $B10 url('../images/family-picture-istoc.jpg') center no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // background-color: $B10;
+    background: linear-gradient(90deg, $B50 10%, $B10 100%);
     padding: 50px 0 110px;
     min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
+
+    @include media(511px) {
+        background: $B10 url('../images/family-picture-istoc.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
     &:after {
         content: '';
         background-color: rgba($N30, 0.4);
@@ -33,12 +42,12 @@
     &__title {
         @include text($H60, 700);
         margin-bottom: 20px;
-       span {
+        span {
            display: block;
        }
 
        @include media(638px) {
-        @include text($H80, 700);
+            @include text($H80, 700);
        }
     }
     &__subtitle {
