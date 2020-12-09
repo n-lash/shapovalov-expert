@@ -7,17 +7,14 @@
             @include flex-row;
         }
     }
-
     &__content-wrapper {
         flex: 1 1 100%;
         max-width: 100%;
         margin-right: 0;
         font-family: $font--secondary;
-
         &:first-child {
             margin-bottom: 40px;
         }
-
         &:last-child {
             margin-right: 0;
         }
@@ -32,18 +29,10 @@
             }
         }
     }
-
-    &__book-link {
-
-        &--first {}
-
-        &--second {}
-    }
-
+    &__book-link {}
     &__img-wrapper {
         margin-bottom: 30px;
     }
-
     &__name {
         @include text($H36, 600);
         line-height: 1.23;
@@ -53,7 +42,6 @@
             @include text($H46, 600);
         }
     }
-
     &__descr {
         @include text($H20, 300);
         line-height: 1.55;

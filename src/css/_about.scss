@@ -7,7 +7,6 @@
             @include flex-row(stretch, stretch);
         }
     }
-
     &__img-wrapper {
         flex: 1 1 100%;
         max-width: 100%;
@@ -23,7 +22,6 @@
             @include padding-hack(46.3%);
         }
     }
-
     &__content-wrapper {
         flex: 1 1 100%;
         max-width: 100%;
@@ -31,7 +29,7 @@
         padding: 26px;
 
         @include media($screen-ipad-pro) {
-            margin-right: 40px;
+            margin-right: 0;
             flex: 1 1 50%;
             max-width: 50%;
         }
@@ -40,12 +38,11 @@
             padding: 60px;
         }
     }
-
     &__title {
-        // font-family: $font--secondary;
-        // @include text($H46, 600, $N0);
         text-align: center;
-        // line-height: 1;
+        &:after {
+            margin: 34px auto 0;
+        }
 
         @include media($screen-ipad-pro) {
             text-align-last: left;
@@ -53,19 +50,7 @@
                 margin-bottom: 24px;
             }
         }
-        &:after {
-            // content: '';
-            // display: block;
-            // width: 50px;
-            // height: 3px;
-            // background-color: $N0;
-            // opacity: 0.6;
-            // margin-top: 34px;
-            // margin: 34px auto 0;
-            margin: 34px auto 0;
-        }
     }
-
     &__text {
         font-family: $font--secondary;
         @include text($H20, 300, $N0);
