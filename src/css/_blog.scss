@@ -3,12 +3,65 @@
     background: linear-gradient(90deg, $B50 10%, $B10 100%);
     padding: 105px 0 105px;
     &__container {
-        @include flex-row;
-        padding: 0 10px 0;
         margin-bottom: 60px;
-        flex-wrap: wrap;
     }
-
+    &-grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -16px;
+        &__item {
+            flex-basis: 100%;
+            padding-left: 16px;
+            margin-bottom: 16px;
+            
+            @media (min-width: 681px) {
+                flex-basis: 50%;
+            }
+            
+            @media (min-width: 993px) {
+                flex-basis: 33.33%;
+            }
+            
+            @media (min-width: 1171px) {
+              flex-basis: 25%;
+            }
+        }
+        &__item-wrapper {
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        &__img-wrapper {
+            @include flex(stretch, stretch);
+            @include padding-hack($padding: 100%, $size: cover);
+            background-color: $N0;
+        }
+        &__text-wrapper {
+            padding: 20px;
+            background-color: $N05;
+            position: relative;
+            min-height: 160px;
+        }
+        &__date {
+            margin-bottom: 20px;
+        }
+        &__title {
+            @include text($H20, 600);
+            line-height: 1.25;
+        }
+        &__link {
+            display: inline-block;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
     &__title {
         text-align: center;
         text-transform: uppercase;
@@ -23,7 +76,20 @@
             margin: 30px auto 50px;
         }
     }
-
+    &__social-link {
+        @include text($H20, 300, $N0);
+        margin-bottom: 40px;
+        text-align: center;
+        a {
+            @include text($H24, 700, $B70t);
+            font-weight: 700;
+            font-style: italic;
+            &:hover {
+                text-decoration: underline;
+                transition: all 0.2s ease;
+            }
+        }
+    }
     &__btn {
         @include text($H14, 700);
         @include flex(center, center);
@@ -41,32 +107,5 @@
         &:active {
             box-shadow: inset 0px 0px 20px 0px rgba($N00, 0.4);
         }
-    }
-}
-
-.blog-article {
-    flex: 1 1 30%;
-    max-width: 30%;
-    // margin-right: 20px;
-    // margin-left: 20px;
-    margin: 20px;
-    &__link {}
-
-    &__img-wrapper {
-        @include flex(stretch, stretch);
-    }
-
-    &__text-wrapper {
-        padding: 20px 30px 25px;
-        background-color: $N05;
-    }
-
-    &__date {
-        margin-bottom: 20px;
-    }
-
-    &__title {
-        @include text($H16, 600);
-        line-height: 1.25;
     }
 }

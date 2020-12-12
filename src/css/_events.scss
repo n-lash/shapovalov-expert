@@ -33,7 +33,7 @@
         @include text($H20, 300);
         margin-bottom: 20px;
         a {
-            @include text($H24, 700);
+            @include text($H24, 700, $B50);
             font-weight: 700;
             font-style: italic;
             &:hover {
@@ -44,7 +44,7 @@
     }
 
     &__date {
-        @include text($H24, 700);
+        @include text($H24, 700, $R30y);
         font-style: italic;
     }
 }
