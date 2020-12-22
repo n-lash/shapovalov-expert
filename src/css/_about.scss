@@ -47,7 +47,7 @@
         @include media($screen-ipad-pro) {
             text-align-last: left;
             &:after {
-                margin-bottom: 24px;
+                margin: 34px 0 24px;
             }
         }
     }

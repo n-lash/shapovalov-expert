@@ -107,7 +107,7 @@ p {
     @include flex(center, center);
     padding: 0 50px 0;
     box-shadow: 0px 0px 50px 0px rgba($N00, 0.5);
-    border-radius: 30px;
+    border-radius: 6px;
     background-color: $N0;
     min-height: 50px;
     width: fit-content;
